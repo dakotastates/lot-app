@@ -1,4 +1,5 @@
 import Registration from './auth/Registration'
+import Login from './auth/Login'
 
 function Home(props) {
 
@@ -9,9 +10,10 @@ function Home(props) {
 
   return(
     <div>
-    <h1>Home</h1>
-    <h1>Status: {props.loggedInStatus}</h1>
-    <Registration handleSuccessfulAuth={handleSuccessfulAuth} />
+      <h1>Home</h1>
+      <h1>Status: {props.loggedInStatus}</h1>
+      <Registration handleSuccessfulAuth={handleSuccessfulAuth} />
+      <Login handleSuccessfulAuth={handleSuccessfulAuth} />
     </div>
   )
 }
