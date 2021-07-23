@@ -3,6 +3,11 @@ import Auth from './auth/Auth';
 import Dashboard from './Dashboard';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import '../styles/App.css';
+// import Home from './Home'
+// import PrivateRoute from "../helpers/PrivateRoute";
+// import Library from './Library';
+
 
 function App() {
 
@@ -52,25 +57,27 @@ function App() {
 
   return (
     <div className="App">
-
       <Router>
         {state.loggedInStatus ? (
           <Route
-            exact
+
             path={"/"}
             render={props => (
-              <Dashboard  { ...props} handleLogout={handleLogout} loggedInStatus={state.loggedInStatus}/>
+              <Dashboard  { ...props} handleLogout={handleLogout} user={state.user} loggedInStatus={state.loggedInStatus}/>
             )}
           />
           ) : (
             <Route
-              exact
+
               path={"/"}
               render={props => (
                 <Auth  { ...props} handleLogin={handleLogin} loggedInStatus={state.loggedInStatus}/>
               )}
             />
         )}
+
+
+
       </Router>
 
     </div>
