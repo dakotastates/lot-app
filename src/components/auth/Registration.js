@@ -33,18 +33,21 @@ function Registration(props) {
     }
     // console.log("registration res", response);
   }).catch(error =>{
-    console.log("registration error", error);
+    console.log("registration error", error.response.data);
+
   })
   }
 
   return(
     <div>
+      {state.registrationErrors}
       <form onSubmit={handleSubmit}>
         <input type="email" name="email" placeholder="Email" value={state.email} onChange={handleChange} required/>
         <input type="password" name="password" placeholder="Password" value={state.password} onChange={handleChange} required/>
         <input type="password" name="password_confirmation" placeholder="Password Confirmation" value={state.password_confirmation} onChange={handleChange} required/>
         <button type="submit">Register</button>
       </form>
+      Already have an Account? <button onClick={()=>props.toggle(true)}>Login</button>
     </div>
   )
 }

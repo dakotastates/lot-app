@@ -42,6 +42,7 @@ function Login(props) {
         <input type="password" name="password" placeholder="Password" value={state.password} onChange={handleChange} required/>
         <button type="submit">Login</button>
       </form>
+      Need an account? <button onClick={()=>props.toggle(false)}>SignUp</button>
     </div>
   )
 }
