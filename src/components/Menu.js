@@ -20,7 +20,7 @@ function Menu(props) {
         <div class="menu-container">
           <ul class="menu-list">
             <li class="menu-list-item active"><Link class="menu-list-item active" to="/" >Home</Link></li>
-            <li class="menu-list-item active"><Link class="menu-list-item" to={`/library/${props.user.id}`} >My Library</Link></li>
+            <li class="menu-list-item"><Link class="menu-list-item" to={`/library/${props.user.id}`} >My Library</Link></li>
             <li class="menu-list-item">Find A Library</li>
 
           </ul>

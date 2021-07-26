@@ -1,0 +1,13 @@
+.container{
+  padding-top: 50px;
+  background-color: #151515;
+  /* calculate the height to adjust for navbar */
+  /* min-height: calc(100vh - 50px); */
+  color: white;
+}
+
+
+.content-container{
+  /* adjust margin to account for sidebar */
+  margin-left: 50px;
+}
